@@ -8,6 +8,8 @@ spec:
   containers:
   - name: spacetime
     image: clockworklabs/spacetimedb
+    command: ["/bin/sh"]
+    args: ["-c", "spacetimedb start"] #--listen-addr=0.0.0.0.3000"]
     ports:
     - containerPort: 80
     readinessProbe:
